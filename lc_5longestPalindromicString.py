@@ -1,4 +1,12 @@
 #given a string, s, return the longest palindromic string
+"""
+--itterates through length of string
+--sets left,right pointers checking for even/odd string lengths
+--check if pointers are in bounds and string vals at pointers match
+--if so, sets resLen to the maximum length of matching characters 
+--sets res to palindromic string
+--returns res when points are out of bounds
+"""
 
 class Solution(object):
     def longestPalindrome(self,s):
