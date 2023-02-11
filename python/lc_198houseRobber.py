@@ -6,10 +6,20 @@
 --alerting the police
 """
 
-#dynamic programing solution 
+
 class Solution(object):
     def rob(self,nums):
-        
+
+        rob1=rob2=0
+        for n in nums:
+            temp=max(n+rob1,rob2)
+            rob1=rob2
+            rob2=temp
+        return rob2
+
+
+        #dynamic programing solution 
+        """
         if not nums:
             return 0
         
@@ -23,10 +33,7 @@ class Solution(object):
             maxRobAmount[i]=max(maxRobAmount[i+1],maxRobAmount[i+2]+nums[i])
         
         return maxRobAmount[0]
-
-
-
-
+        """
 
 
 
