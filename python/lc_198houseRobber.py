@@ -10,6 +10,7 @@
 class Solution(object):
     def rob(self,nums):
 
+        #initialize rob1 and rob2 as 0
         rob1=rob2=0
         for n in nums:
             temp=max(n+rob1,rob2)
