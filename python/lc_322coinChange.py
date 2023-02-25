@@ -2,6 +2,7 @@
 """
 ---given an array of integers, coins, of different denominations and integer amount
 ---return the fewest number of coins needed to makeup that amount
+---runtime: 906ms, memory: 14.1mb
 """
 
 class Solution(object):
