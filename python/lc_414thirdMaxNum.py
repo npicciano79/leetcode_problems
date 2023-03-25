@@ -7,6 +7,8 @@
 
 class Solution(object):
     def thirdMax(self,nums):
+
+        
         numsSet=sorted(set(nums))
 
         if len(numsSet)>=3:
@@ -15,6 +17,7 @@ class Solution(object):
             answer=numsSet[-1]
     
         return answer
+        
 
 nums=[3,2,1]
 solution=Solution()
