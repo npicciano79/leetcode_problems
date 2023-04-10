@@ -31,4 +31,22 @@ class Solution(object):
             curr.next=new_node
         
         return head_ref
-        
+    
+    def insertionSortItterative(self,head):
+        dummy=ListNode(0)
+        dummy.next=head
+        cur,prev=head.next,head
+
+        while cur:
+            if cur.val>=prev.val:
+                prev,cur=cur,cur.next
+                continue
+            tmp=dummy
+            while cur.val>tmp.next.val:
+                tmp=tmp.next
+            prev.next=cur.next
+            cur.next=tmp.next
+            tmp.next=cur
+            cur=prev.next
+        return dummy.next
+    
