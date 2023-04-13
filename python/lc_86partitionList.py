@@ -11,6 +11,9 @@ class Node:
         self.next=n
         self.prev=p
 
+    def __str__(self):
+        return ('('+str(self.data)+')')
+
 class LinkedList:
     def __init__(self,r=None):
         self.head=r
@@ -30,7 +33,7 @@ class LinkedList:
         
 
     def paritionList(self,head,x):
-
+        print('hit')
         left=leftDummy=Node(-1)
         right=rightDummy=Node(-1)
 
@@ -43,6 +46,7 @@ class LinkedList:
                 right=right.next
             head=head.next
         left.next=rightDummy.next
+        right.next=None
         return leftDummy.next
 
 
@@ -53,5 +57,5 @@ ll.add(5)
 ll.add(6)
 ll.add(2)
 print(ll.printList())
-ll.paritionList(ll.head,3)
+ll.head=ll.paritionList(ll.head,1)
 print(ll.printList())
