@@ -6,6 +6,18 @@
 
 class Solution(object):
     def canAttendMeetings(self,intervals):
+        intervals=sorted(intervals)
+        print(intervals)
+        for i in range(1,len(intervals)):
+            if intervals[i-1][1]>intervals[i][0]:
+                return False
+        
+        return True
+
+
+
+        #solution exceeds time limitations for larger sets 
+        """
         length=len(intervals)
 
         for i in range(length):
@@ -16,9 +28,13 @@ class Solution(object):
                 if not tempSetI.isdisjoint(tempSetJ):
                     return False
         return True
+        
+        """
+        
 
 
-intervals=[[0,30],[5,10],[15,20]]
+
+intervals=[[0,30],[15,20],[5,10]]
 intervals2=[[7,10],[2,4]]
 
 solution=Solution()
