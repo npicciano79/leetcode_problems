@@ -14,6 +14,17 @@
 
 class Solution(object):
     def sortPeople(self,names,heights):
+
+        #solution using sorted
+        #credit to Anos on Leetcode
+        ans=[]
+        for i in range(len(heights)):
+            ans.append([heights[i],names[i]])
+            ans=sorted(ans,reverse=True)
+            print(ans)
+        return[n for h,n in ans]
+    
+        """
         while heights:
             heightMaxIndex=heights.index(max(heights))
             #pop previous max from heights
@@ -24,6 +35,7 @@ class Solution(object):
             #print(names)
             
         return names
+        """
 
         """
         res=[]
