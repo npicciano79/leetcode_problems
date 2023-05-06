@@ -8,6 +8,19 @@
 
 class Solution(object):
     def sumOddLengthSubarrays(self,arr):
+
+        #runtime 40ms  memory 13.4mb
+        n=len(arr)
+        ans=0
+
+        for start in range(n):
+            for end in range(start,n,2):
+                ans+=sum(arr[start:end+1])
+        return ans
+
+
+        #runtime 104ms memory: 13.4mb
+        """
         arrOddSum=0
         if len(arr)%2!=0 and len(arr)!=1:
             #sum of total array and each element
@@ -31,6 +44,7 @@ class Solution(object):
             print('counter incremented')
 
         return arrOddSum
+        """
 
 
 
