@@ -19,6 +19,11 @@ class Solution(object):
                 max2=num
         return (max1-1)*(max2-1)
     
+
+        #using sort function 
+        nums.sort()
+        return ((nums[-1]-1)*(nums[-2]-1))
+    
         
 
 nums=[3,4,5,2]
