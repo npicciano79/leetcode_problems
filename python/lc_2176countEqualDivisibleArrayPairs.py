@@ -9,6 +9,16 @@
 class Solution(object):
     def countPairs(self,nums,k):
 
+
+        count,n=0,len(nums)
+
+        for i in range(n):
+            for j in range(i+1,n):
+                if nums[i]==nums[j] and (j*i)%k==0:
+                    count+=1
+        
+        return count
+
         #solution fails for larger array lengths 
         """
         nums.sort()
