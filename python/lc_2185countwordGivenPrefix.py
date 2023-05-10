@@ -7,6 +7,19 @@
 
 class Solution(object):
     def prefixCount(self,words,pref):
+
+        #additional solution using slice 
+        count=0
+        words.sort()
+        prefixLength=len(pref)
+
+        for word in words:
+            if pref==word[:prefixLength]:
+                count+=1
+        
+        return count
+
+
         count=0
         words.sort()
         prefixLength=len(pref)
