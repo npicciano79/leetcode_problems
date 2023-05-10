@@ -7,6 +7,16 @@
 
 class Solution(object):
     def largestAltitude(self,gain):
+        alt=[0]*(len(gain)+1)
+        for i in range(1,len(gain)+1):
+            alt[i]=alt[i-1]+gain[i-1]
+        
+        return max(alt)
+
+
+
+
+        """
         alt=[]
         alt.append(0)
 
@@ -16,6 +26,7 @@ class Solution(object):
             count+=1
 
         return max(alt)
+        """
 
 
 gain=[-5,1,5,0,-7]
