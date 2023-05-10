@@ -30,6 +30,16 @@ class Solution(object):
         return ""
         
 
+        #solution#-builds  reversedWord for each word and 
+        #compares if word and reverseWord are equal
+        for word in words:
+            reversedWord=''
+            for char in word:
+                reversedWord=char+reversedWord
+            if reversedWord==word:
+                return word
+        
+        return ""
     
 
 
