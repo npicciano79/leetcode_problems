@@ -15,8 +15,24 @@ class Solution(object):
         
         return ""
     
+        #solution2 - uses starting and ending pointers and 
+        # compairs characters in word
+        for word in words:
+            start,end=0,len(word)-1
+            while start<=len(word)//2:
+                if word[start]!=word[end]:
+                    break
+                elif start>=end:
+                    return word
+                start+=1
+                end-=1 
+        
+        return ""
+        
 
     
+
+
 
 words=["abc","car","ada","racecar","cool"]
 solution=Solution()
